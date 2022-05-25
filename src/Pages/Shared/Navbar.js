@@ -78,6 +78,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
+      {/* dashboard toggle  */}
       <div className="navbar-end">
         <label
           tabIndex="1"
