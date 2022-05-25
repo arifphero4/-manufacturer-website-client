@@ -1,16 +1,16 @@
 [
     {
         "_id": 1,
-        "name": "Double Thick 4 Inch, Fence Brush, Paint Brush For Walls",
+        "name": "Double Thick 4 Inch",
         "image": "https://cdn.globalso.com/esteebrush/12-300x300.jpg",
-        "description": "SRT filament blends hold more paint to save time, less streaking and quality walls and trim. Efficient performance: Sufficient amount of paint applied, even paint application, less streaking, time saving and convenient, high quality paint",
+        "description": "SRT filament blends hold more paint to save time, less streaking and quality walls and trim. Efficient performance: Sufficient amount of paint applied.",
         "price": 20,
         "availableQuantity": 45000,
         "orderQuantity": 2500
     },
     {
         "_id": 2,
-        "name": "Plastic Handle Detail Brush For Car And Wheels 8 Pack",
+        "name": "Plastic Handle For Cars",
         "image": "https://cdn.globalso.com/esteebrush/Main-graph4-300x300.jpg",
         "description": " Blended chemical fiber/hog bristle brush The brushes are made of pig bristles mixed with chemical fiber, which have the advantages of softness and no hair loss, and will not cause harm to the car.",
         "price": 17,
@@ -19,18 +19,18 @@
     },
     {
         "_id": 3,
-        "name": "Fence Paint Brush Paint Brushes For Walls House",
+        "name": "Fence Paint For Walls ",
         "image": "https://cdn.globalso.com/esteebrush/Main-graph14-300x300.jpg",
-        "description": "[Dimensions of wall paintbrush] - The paint brush several different sizes. 40*100mm wall brush for sheds, terraces and wood paint.Soft and thick curtain paintbrushes -Fence paint brush is made from high quality natural bristles and stainless steel rings. The bristles are soft and easy to paint without a lot of effort.",
+        "description": "[Dimensions of wall paintbrush] - The paint brush several different sizes. 40*100mm wall brush for sheds, terraces and wood paint.",
         "price": 77,
         "availableQuantity":12000 ,
         "orderQuantity": 2100
     },
     {
         "_id": 4,
-        "name": "High Quality Replaceable Plastic Handle Fence Paint Brush",
+        "name": " Plastic Handle Fence ",
         "image": "https://cdn.globalso.com/esteebrush/Main-graph3-300x300.jpg",
-        "description": "This fence brush is suit for interior and exterior wall, especially exterior wall.It contains white natural bristle and polyester filament. Natural bristle is hard-wearing, heat resisting, can use with all paints on all surfaces, for example, oil-based paints and water-based paints.",
+        "description": "This fence brush is suit for interior and exterior wall, especially exterior wall.It contains white natural bristle and polyester filament. ",
         "price": 52,
         "availableQuantity": 87000,
         "orderQuantity": 4200
@@ -38,9 +38,9 @@
     
     {
         "_id": 5,
-        "name": "Wire Scratch Brush Heavy Duty Stainless Steel 12 Inch",
+        "name": "Wire Scratch Brush ",
         "image": "https://cdn.globalso.com/esteebrush/Main-graph2-300x300.jpg",
-        "description": "Super decontamination ability:The brush head is made of stainless steel (silver) for fast rust removal, paint removal, rust removal, weld slag removal and scale removal. Clean and remove loose paint from metal parts, suitable for heavy scrubbing. High hardness of steel wire, reduce wire breakage and prolong service life.",
+        "description": "Super decontamination ability:The brush head is made of stainless steel (silver) for fast rust removal, paint removal.",
         "price": 45,
         "availableQuantity": 75000,
         "orderQuantity": 3200
@@ -49,25 +49,25 @@
         "_id": 6,
         "name": "Long Handle Paint Brushes",
         "image": "https://cdn.globalso.com/esteebrush/Shortcut-1-300x300.jpg",
-        "description": "HIGH QUALITY MATERIALS – Paint brushes are made of high quality rayon, these synthetic fibers hold more paint, save time and reduce streaking on your walls or trim. High quality natural fillers, original epoxy resin.",
+        "description": "HIGH QUALITY MATERIALS – Paint brushes are made of high quality rayon, these synthetic fibers hold more paint, save time and reduce streaking on your walls or trim.",
         "price": 24,
         "availableQuantity": 51000,
         "orderQuantity": 1000
     },
     {
         "_id": 7,
-        "name": "Natural Bristle Mixed Synthetic Paint Brush With Plastic Handle",
+        "name": "Natural Bristle Mixed ",
         "image": "https://cdn.globalso.com/esteebrush/088A39801-300x300.jpg",
-        "description": "This fence brush is suit for interior and exterior wall, especially exterior wall.It contains white natural bristle and polyester filament. Natural bristle is hard-wearing, heat resisting, can use with all paints on all surfaces, for example, oil-based paints and water-based paints.",
+        "description": "This fence brush is suit for interior and exterior wall, especially exterior wall.It contains white natural bristle and polyester filament. ",
         "price": 24,
         "availableQuantity": 51000,
         "orderQuantity": 1000
     },
     {
         "_id": 8,
-        "name": "Shortcut Angle Sash Paint Brush, 2-Inch, Blue",
+        "name": "Shortcut Angle Sash ",
         "image": "https://cdn.globalso.com/esteebrush/1-300x300.jpg",
-        "description": "corner trim band and decorative brush, Technex nylon and Ole polyester blend, long fluted natural finishing wood handle. Add extra shine to your product angled trim and fluted, natural hardwood handle.",
+        "description": "corner trim band and decorative brush, Technex nylon and Ole polyester blend, long fluted natural finishing wood handle. ",
         "price": 97,
         "availableQuantity": 29000,
         "orderQuantity": 1500

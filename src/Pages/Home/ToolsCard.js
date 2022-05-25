@@ -2,7 +2,15 @@ import React from "react";
 import PrimaryButton from "../Shared/PrimaryButton";
 
 const ToolsCard = ({ tool }) => {
-  const { _id, name, image, price, description } = tool;
+  const {
+    _id,
+    name,
+    image,
+    price,
+    description,
+    availableQuantity,
+    orderQuantity,
+  } = tool;
   return (
     <div class="card w-96 bg-base-100 shadow-xl">
       <figure class="px-10 pt-10">
