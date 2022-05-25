@@ -1,4 +1,3 @@
-import { typeImplementation } from "@testing-library/user-event/dist/type/typeImplementation";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PurchaseForm from "./PurchaseForm";
