@@ -70,7 +70,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/">
-          <a href=" " class="btn btn-ghost normal-case text-xl">
+          <a href=" " className="btn btn-ghost normal-case text-xl">
             <img className=" h-16" src={logo} alt="" />{" "}
           </a>
         </Link>
