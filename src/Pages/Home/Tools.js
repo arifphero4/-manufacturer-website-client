@@ -1,14 +1,22 @@
-import React, { useEffect, useState } from "react";
+import { useQuery } from "react-query";
+import Loading from "../Shared/Loading";
 import ToolsCard from "./ToolsCard";
 
 const Tools = () => {
-  const [tools, setTools] = useState();
+  // const [tools, setTools] = useState();
 
-  useEffect(() => {
-    fetch("http://localhost:5000/tool")
-      .then((res) => res.json())
-      .then((data) => setTools(data));
-  }, []);
+  const { data: tools, isLoading } = useQuery("tool", () =>
+    fetch("http://localhost:5000/tool").then((res) => res.json())
+  );
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
+
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/tool")
+  //     .then((res) => res.json())
+  //     .then((data) => setTools(data));
+  // }, []);
   return (
     <div className="px-28 my-12">
       <h3 className="text-2xl text-center my-12 font-bold">Our Tools</h3>
