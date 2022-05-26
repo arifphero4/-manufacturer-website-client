@@ -9,10 +9,17 @@ const UserRow = ({ user, refetch }) => {
         "content-type": "application/json",
       },
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status === 403) {
+          alert("failed to make an admin");
+        }
+        return res.json();
+      })
       .then((data) => {
-        refetch();
-        alert("successfully make an admin");
+        if (data.modifiedCount > 0) {
+          refetch();
+          alert("successfully make an admin");
+        }
       });
   };
   return (
