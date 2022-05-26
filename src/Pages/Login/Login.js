@@ -10,7 +10,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useToken from "../../hooks/useToken";
 
 const Login = () => {
-  const [signInWithGoogle, googleLoading, googleError] =
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
@@ -20,7 +20,7 @@ const Login = () => {
     handleSubmit,
   } = useForm();
 
-  const [token] = useToken(user || user);
+  const [token] = useToken(user || googleUser);
   let signInError;
   const navigate = useNavigate();
   const location = useLocation();
