@@ -5,19 +5,19 @@ import PurchaseForm from "./PurchaseForm";
 const Purchase = () => {
   const { id } = useParams();
 
-  const [tool, setTool] = useState();
+  const [tool, setTool] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/tool/${id}`)
+    fetch(`https://floating-brook-95654.herokuapp.com/tool/${id}`)
       .then((res) => res.json())
       .then((data) => setTool(data));
   }, []);
 
   return (
     <section>
-      <div className="grid md:grid-cols-1 lg:grid-cols-2">
+      <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <div className="card w-96 bg-base-100 shadow-xl">
+          <div className="card bg-base-100 w-cover shadow-xl">
             <figure>
               <img src={tool?.image} alt="Shoes" />
             </figure>
@@ -43,7 +43,7 @@ const Purchase = () => {
 
         {/* order form  */}
         <div>
-          <PurchaseForm></PurchaseForm>
+          <PurchaseForm tool={tool}></PurchaseForm>
         </div>
       </div>
     </section>

@@ -1,14 +1,50 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
+import auth from "../../firebase.init";
+import swal from "sweetalert";
 
-const PurchaseForm = () => {
+const PurchaseForm = ({ tool }) => {
+  const [user] = useAuthState(auth);
+  console.log(user);
+  // console.log(tool);
+  const {
+    _id,
+    name,
+    image,
+    description,
+    price,
+    availableQuantity,
+    orderQuantity,
+  } = tool;
   const {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    data.email = user.email;
+    data.name = user.displayName;
+    data.price = price;
+    data.title = name;
+    fetch("https://floating-brook-95654.herokuapp.com/order", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.insertedId) {
+          swal("Complete", "Product added to cart!", "success");
+          reset();
+        }
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -18,14 +54,10 @@ const PurchaseForm = () => {
           </label>
           <input
             type="text"
-            placeholder="Your Name"
+            disabled
+            value={user.displayName}
             className="input input-bordered w-full max-w-xs"
-            {...register("name", {
-              required: {
-                value: true,
-                message: "Name is Required",
-              },
-            })}
+            {...register("name", {})}
           />
           <label className="label">
             {errors.name?.type === "required" && (
@@ -42,18 +74,9 @@ const PurchaseForm = () => {
           </label>
           <input
             type="email"
-            placeholder="Your Email"
+            disabled
+            value={user.email}
             className="input input-bordered w-full max-w-xs"
-            {...register("email", {
-              required: {
-                value: true,
-                message: "Email is Required",
-              },
-              pattern: {
-                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                message: "Provide a valid Email",
-              },
-            })}
           />
           <label className="label">
             {errors.email?.type === "required" && (
@@ -70,21 +93,21 @@ const PurchaseForm = () => {
         </div>
         <div className="form-control w-full max-w-xs">
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text">Quantity</span>
           </label>
           <input
-            type="password"
-            placeholder="Password"
+            // value={tool?.orderQuantity}
+            placeholder={`minimum quantity ${tool?.orderQuantity}`}
             className="input input-bordered w-full max-w-xs"
-            {...register("password", {
+            {...register("quantity", {
               required: {
                 value: true,
-                message: "Password is Required",
+                message: "Order Quantity is Required",
               },
-              minLength: {
-                value: 6,
-                message: "Must be 6 characters or longer",
-              },
+              // minLength: {
+              //   value: 6,
+              //   message: "Must be 6 characters or longer",
+              // },
             })}
           />
           <label className="label">
@@ -104,7 +127,7 @@ const PurchaseForm = () => {
         <input
           className="btn btn-secondary w-full max-w-xs text-white uppercase"
           type="submit"
-          value="Sign Up"
+          value="Sumbit"
         />
       </form>
     </div>

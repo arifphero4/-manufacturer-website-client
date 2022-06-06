@@ -22,12 +22,17 @@ const Banner = () => {
           alt=""
         /> */}
         <div className="text-white text-center">
-          <h1 className="text-5xl font-bold">Your New Smile Starts Here</h1>
-          <h5 className="py-6 text-2xl text-center">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </h5>
+          <h1 className="text-5xl font-bold uppercase">
+            {" "}
+            Best place to find perfact brushes for color
+          </h1>
+
+          <p className="py-6 text-xl ">
+            {" "}
+            Danyang Yashi Brush Factory is a professional manufacturer for
+            series brushes over 30+ years, special in paint brush and paint
+            roller. By more than 30 years endeavor.
+          </p>
           <PrimaryButton>explore</PrimaryButton>
         </div>
       </div>
